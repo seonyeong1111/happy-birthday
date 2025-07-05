@@ -1,17 +1,35 @@
-body {
+html,
+body,
+#root {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: #111;
   color: #fff;
-  min-height: 100vh; /* 유지 */
-  overflow-y: auto; /* 유지 */
-  scrollbar-width: none; /* 파이어폭스용 */
+  min-height: 100vh;
+}
+
+/* 기본값: 모바일 스크롤 허용 */
+body {
+  overflow-y: auto;
+  scrollbar-width: none; /* 파이어폭스 스크롤바 숨김 */
 }
 
 body::-webkit-scrollbar {
-  display: none; /* 크롬, 사파리, 엣지용 */
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
 }
 
+/* PC 구간 고정 (가로 기준 768px 이상부터) */
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    overflow: hidden; /* 스크롤 완전 차단 */
+  }
+}
+
+/* 그 외 디자인 유지 */
 .container {
   display: flex;
   justify-content: center;
