@@ -56,9 +56,12 @@ function Card({ photo, message, bg, color, name }) {
       onClick={() => setIsFlipped(!isFlipped)}
       style={{
         perspective: "1000px",
-        width: "300px",
-        height: "200px",
+        width: "100%",
+        maxWidth: 320,
+        aspectRatio: "3 / 2", // 가로:세로 비율 3:2 유지
         cursor: "pointer",
+        flex: "1 1 300px",
+        minWidth: 260,
       }}
       title={`Click to ${isFlipped ? "show photo" : "read message"}`}
     >
@@ -96,14 +99,6 @@ function Card({ photo, message, bg, color, name }) {
           />
         </div>
 
-        <style>
-          {`
-    .hover-darken:hover {
-      filter: brightness(0.85);
-    }
-  `}
-        </style>
-
         {/* 뒷면 */}
         <div
           style={{
@@ -122,11 +117,13 @@ function Card({ photo, message, bg, color, name }) {
             justifyContent: "center",
             fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
             whiteSpace: "pre-wrap",
-            fontSize: "1rem",
+            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)", // 반응형 폰트
             userSelect: "none",
           }}
         >
-          <strong>🎂 {name} 님, 생일 축하해요! 🎉</strong>
+          <strong style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.6rem)" }}>
+            🎂 {name} 님, 생일 축하해요! 🎉
+          </strong>
           <p style={{ marginTop: "0.5rem", flexGrow: 1 }}>{message}</p>
           <small style={{ fontFamily: "'Courier New', monospace" }}>
             {`console.log("Happy Birthday ${name}!");`}
@@ -176,11 +173,13 @@ function App() {
         <div style={{ fontSize: "2rem" }}>로딩 중...</div>
       ) : !showMessage ? (
         <>
-          <h1 style={{ fontSize: "3rem" }}>🎉 Happy Birthday! 🎂</h1>
+          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}>
+            🎉 Happy Birthday! 🎂
+          </h1>
           <button
             style={{
               padding: "0.7rem 1.5rem",
-              fontSize: "1rem",
+              fontSize: "clamp(1rem, 2vw, 1.2rem)",
               cursor: "pointer",
               border: "none",
               borderRadius: "5px",
@@ -199,7 +198,7 @@ function App() {
         <>
           <h1
             style={{
-              fontSize: "3rem",
+              fontSize: "clamp(2rem, 5vw, 3rem)",
               marginBottom: "2rem",
               color: "#fff",
               textShadow: "0 0 15px #ff69b4",
