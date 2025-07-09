@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import photo1 from "./assets/KakaoTalk_20250709_155224428.jpg";
-import photo2 from "./assets/LODIWLJWeuBlogBkFQSu13l2s2HQ1dtMf0eN83PgIWw6koET_a4AozK3Gl3Vd8WzC5mRT-xmmsh9w5FMsM33SQ.webp";
+import photo2 from "./assets/KakaoTalk_20250709_160756042.jpg";
 import photo3 from "./assets/KakaoTalk_20250709_012920523.jpg";
 import photo4 from "./assets/KakaoTalk_20250709_013203825.jpg";
 import photo5 from "./assets/KakaoTalk_20250709_015502016.jpg";
