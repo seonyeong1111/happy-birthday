@@ -1,48 +1,53 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
-import photo1 from "./assets/KakaoTalk_20250705_142051175.jpg";
-import photo2 from "./assets/KakaoTalk_20250705_142056709.jpg";
+import photo1 from "./assets/KakaoTalk_20250709_155224428.jpg";
+import photo2 from "./assets/LODIWLJWeuBlogBkFQSu13l2s2HQ1dtMf0eN83PgIWw6koET_a4AozK3Gl3Vd8WzC5mRT-xmmsh9w5FMsM33SQ.webp";
+import photo3 from "./assets/KakaoTalk_20250709_012920523.jpg";
+import photo4 from "./assets/KakaoTalk_20250709_013203825.jpg";
+import photo5 from "./assets/KakaoTalk_20250709_015502016.jpg";
+import photo6 from "./assets/KakaoTalk_20250709_013223112.jpg";
 
 const letters = [
   {
     name: "현수",
     photo: photo1,
-    message: `🎂 현수 님, 생일 축하해요! 🎉\n오늘 하루 행복만 가득하길!`,
+    message: `정호님 생일 이벤트 같이 열심히 준비했는데 자기 생일에는 본가로 가시면 어떡해요!! 좋아하는 베트남 쌀국수 사드릴게요 같이 먹어요!><`,
     bg: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
     color: "#5a2a27",
   },
   {
     name: "지민",
-    photo: photo2,
-    message: `🎂 지민 님, 멋진 하루 보내세요! 🌟\n항상 행복하세요!`,
+    photo: photo6,
+    message: `생일축하합니다~~~~!!~~!~!@@!~!@~!@~!@~!@~@!~@!~!@~@!~@!
+행복한 생일 되시고 무탈한 하루 되시고 맛있는거 많이 드시는 식사 가지시고 강녕한 날 되십셔`,
     bg: "linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)",
     color: "#264653",
   },
   {
     name: "민준",
-    photo: "https://placedog.net/300/200",
-    message: `🎂 민준 님, 최고의 생일 되세요! 🎉\n건강과 행복을 빕니다!`,
+    photo: photo3,
+    message: `학교오시면 돈까스 대접할게요~~`,
     bg: "linear-gradient(135deg, #fbc7aa 0%, #f8b195 100%)",
     color: "#6f4e37",
   },
   {
     name: "서연",
-    photo: "https://placebeard.it/300/200",
-    message: `🎂 서연 님, 행복한 생일 보내세요! 🎈\n늘 웃음 가득하세요!`,
+    photo: photo4,
+    message: `현수형 생일 축하드립니다 방학 때 같이 놀러가요~~~ `,
     bg: "linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)",
     color: "#2a4d14",
   },
   {
     name: "지우",
-    photo: "https://baconmockup.com/300/200",
-    message: `🎂 지우 님, 즐거운 생일 보내세요! 🎁\n항상 사랑받는 하루 되길!`,
+    photo: photo2,
+    message: `현수행님 생축입니다!! 맛난 거 많이 드시고 행복한 하루 보내세요🥳`,
     bg: "linear-gradient(135deg, #fceabb 0%, #f8b500 100%)",
     color: "#5a3e00",
   },
   {
     name: "도현",
-    photo: "https://placekitten.com/301/201",
-    message: `🎂 도현 님, 행복 가득한 생일 되세요! 🎉\n멋진 한 해 되길 바랍니다!`,
+    photo: photo5,
+    message: `안녕하세요 구름톤 백앤드 파트장 서정호입니다. 너무 잘하고 계세요 앞으로도 파이팅~~`,
     bg: "linear-gradient(135deg, #fddb92 0%, #d1fdff 100%)",
     color: "#004d5a",
   },
@@ -122,11 +127,11 @@ function Card({ photo, message, bg, color, name }) {
           }}
         >
           <strong style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.6rem)" }}>
-            🎂 {name} 님, 생일 축하해요! 🎉
+            🎂 생일 축하해요! 🎉
           </strong>
           <p style={{ marginTop: "0.5rem", flexGrow: 1 }}>{message}</p>
           <small style={{ fontFamily: "'Courier New', monospace" }}>
-            {`console.log("Happy Birthday ${name}!");`}
+            {`console.log("Happy Birthday");`}
           </small>
         </div>
       </div>
